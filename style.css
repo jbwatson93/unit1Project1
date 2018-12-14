@@ -91,7 +91,7 @@ font-family: 'Carter One', cursive;
     color: white;
     background: rgb(126, 124, 124);
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     border-radius: 20px
     
