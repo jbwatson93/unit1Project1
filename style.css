@@ -79,22 +79,32 @@ font-family: 'Carter One', cursive;
 }
 .toggle{
     height: 30px;
-    width: 90px;
+    width: 120px;
     display: flex;
+    color: white;
 }
 #on{
-    width: 45px;
+    width: 100px;
+    height: 30px;
     border: solid;
     text-align: center;
     color: white;
-    background: rgb(126, 124, 124)
+    background: rgb(126, 124, 124);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px
+    
+
 }
 #off{
-    width: 45px;
+    width: 25px;
+    height: 25px;
     border: solid;
     text-align: center;
     background: blue;
-    color: white
+    color: white;
+    border-radius: 100%;
 }
 #level{
 color: white;
@@ -118,6 +128,23 @@ font-size: 2em;
     width: 50px;
     border-radius: 100%;
     background: rgba(255, 42, 42, 0.767);
-    box-shadow: 0px 0px 20px rgb(253, 252, 247)
+    box-shadow: 0px 0px 20px rgb(253, 252, 247);
+    display: flex;
+justify-content: center;
+align-items: center;
 
+}
+#start{
+    font-size: 2em;
+    color: white;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+#startButton{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    border: solid black;
+    background: red
 }
