@@ -153,6 +153,8 @@ function checkgreen(){
     }
 }
 
+//=======================================
+
 $("#blue").on("click", function (){
    if(compTurn == true){
     } 
