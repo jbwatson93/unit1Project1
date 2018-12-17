@@ -1,5 +1,6 @@
 //------------------------------------------------------
 //------------defined variables------------------------
+//------------and arrays------------------------------
 var compSequence = [];
 let level = compSequence.length;
  var on = false
