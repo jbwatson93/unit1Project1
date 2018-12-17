@@ -43,14 +43,17 @@ for( let i =0;i < compSequence.length;i++){
         buttons[compSequence[i]].fadeOut(50).fadeIn(60)
     }, tempo * i)
 } loopDelay(i)
+}
+compTurn = false
+changeTurn()
+
 
 }
-
-
-compTurn = false}
 
 else{}
+
 }
+
 // on and off switch---------------------
 //=========================================
 // $("#on").on("click", onOff())
@@ -85,7 +88,9 @@ function checkBlue(){
            levelCount = 0
            generateSeq()
            compTurn = true;
+           changeTurn()
            setTimeout(function (){
+           
             lightButtons()
         },2000)
         
@@ -109,7 +114,9 @@ function checkYellow(){
             levelCount = 0
             generateSeq()
             compTurn = true;
+            changeTurn()
             setTimeout(function (){
+                
                 lightButtons()
             },2000)
             
@@ -133,8 +140,9 @@ function checkRed(){
             $("#level").text(level)
             levelCount = 0
             generateSeq()
-            compTurn = true;
+            changeTurn()
             setTimeout(function (){
+                
                 lightButtons()
             },2000)
             
@@ -157,7 +165,9 @@ function checkgreen(){
             levelCount = 0
             generateSeq()
             compTurn = true;
+            changeTurn()
             setTimeout(function (){
+                
                 lightButtons()
             },2000)
             
@@ -218,3 +228,14 @@ $("#green").on("click", function (){
     console.log(levelCount)
    }
 })
+
+function changeTurn(){
+    if(compTurn == true){
+        $("#turn").text("Comp")
+        $("#turn").css("background", "red")
+    }
+    else{
+        $("#turn").text("You")
+        $("#turn").css("background", "green")
+    }
+}
