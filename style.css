@@ -25,7 +25,7 @@ font-family: 'Oleo Script', cursive; */
 .simon{
 height: 400px;
 width: 400px;
-background: gray;
+background: radial-gradient(rgb(255, 255, 255),rgb(255, 253, 148),rgb(255, 166, 0),rgb(247, 80, 108),blue,springgreen,white);
 border-radius: 100%;
 display:grid;
 grid-template-columns: 1fr  1fr;

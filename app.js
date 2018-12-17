@@ -33,7 +33,7 @@ sound[i].play()
 //===========================================
 function lightButtons(){
     if(compTurn == true){
-        changeTempo()
+        
   
 for( let i =0;i < compSequence.length;i++){
     function loopDelay(i){
@@ -96,6 +96,7 @@ function checkBlue(){
            generateSeq();
            compTurn = true;
            changeTurn();
+           changeTempo()
            setTimeout(function (){
            
             lightButtons()
@@ -123,6 +124,7 @@ function checkYellow(){
             generateSeq();
             compTurn = true;
             changeTurn()
+            changeTempo()
             setTimeout(function (){
                 
                 lightButtons()
@@ -151,6 +153,7 @@ function checkRed(){
             generateSeq()
             compTurn = true
             changeTurn()
+            changeTempo()
             setTimeout(function (){
                 
                 lightButtons()
@@ -177,6 +180,7 @@ function checkgreen(){
             generateSeq()
             compTurn = true;
             changeTurn()
+            changeTempo()
             setTimeout(function (){
                 
                 lightButtons()
@@ -252,10 +256,10 @@ function changeTurn(){
 }
 
 function changeTempo(){
-    if(compSequence.length > 5){
-        tempo = 1500
-    }
-    else if( compSequence.length> 9){
+    if(compSequence.length > 4){
         tempo = 1000
+    }
+    else if( compSequence.length > 8){
+        tempo = 500
     }
 }
