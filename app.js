@@ -33,7 +33,7 @@ sound[i].play()
 //===========================================
 function lightButtons(){
     if(compTurn == true){
-    
+        changeTempo()
   
 for( let i =0;i < compSequence.length;i++){
     function loopDelay(i){
@@ -41,17 +41,21 @@ for( let i =0;i < compSequence.length;i++){
      sound[compSequence[i]].play();
         console.log(buttons[compSequence[i]])
         buttons[compSequence[i]].fadeOut(50).fadeIn(60)
+        if(i === compSequence.length-1){
+            compTurn = false
+            levelCount = 0
+            changeTurn()
+            
+        }
     }, tempo * i)
 } loopDelay(i)
-}
-compTurn = false
-levelCount = 0
-changeTurn()
-
 
 }
 
-else{}
+
+
+}
+
 
 }
 
@@ -145,6 +149,7 @@ function checkRed(){
             $("#level").text(level)
             levelCount = 0
             generateSeq()
+            compTurn = true
             changeTurn()
             setTimeout(function (){
                 
@@ -165,7 +170,7 @@ function checkRed(){
 function checkgreen(){
     if(compSequence[levelCount] == 3){
        
-        if(levelCount === compSequence.length-1){
+        if(levelCount == compSequence.length-1){
             level = compSequence.length
             $("#level").text(level)
             levelCount = 0
@@ -199,7 +204,7 @@ $("#blue").on("click", function (){
     lightOnTouch(0);
 playSounds(0)
 checkBlue();
-console.log(levelCount)
+
 
    }
 })
@@ -210,7 +215,7 @@ $("#yellow").on("click", function (){
     lightOnTouch(1);
     playSounds(1)
     checkYellow();
-    console.log(levelCount)
+
    }
 })
 $("#red").on("click", function (){
@@ -220,7 +225,7 @@ $("#red").on("click", function (){
     lightOnTouch(2);
     playSounds(2)
     checkRed();
-    console.log(levelCount)
+    
    }
 })
 
@@ -231,7 +236,7 @@ $("#green").on("click", function (){
     lightOnTouch(3);
     playSounds(3);
     checkgreen();
-    console.log(levelCount)
+    
    }
 })
 
@@ -243,5 +248,14 @@ function changeTurn(){
     else{
         $("#turn").text("You")
         $("#turn").css("background", "green")
+    }
+}
+
+function changeTempo(){
+    if(compSequence.length > 5){
+        tempo = 1500
+    }
+    else if( compSequence.length> 9){
+        tempo = 1000
     }
 }
