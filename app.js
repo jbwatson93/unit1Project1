@@ -110,7 +110,7 @@ function checkBlue(){
        }   
     }
     else{
-        location.reload()
+        failSound()
 
     }
 }
@@ -139,7 +139,7 @@ function checkYellow(){
         
     }
     else{
-        location.reload()
+        failSound()
         
     }
 }
@@ -167,7 +167,7 @@ function checkRed(){
        
     }
     else{
-        location.reload()
+        failSound()
     }
 }
 function checkgreen(){
@@ -193,14 +193,18 @@ function checkgreen(){
         }   
     }
     else{
-
-        location.reload()
+        failSound()
+        
         
     }
 }
 //========================================
 //-----------fail--Sound------------------
 //========================================
+function failSound(){
+    document.getElementById("#failSound").play()
+}
+
 
 //=======================================
 //----------on click events------------
