@@ -64,6 +64,9 @@ function onOff(){
    }, 3000)
 }
 }
+//------=========--------========-------=======
+//-------function to light up buttons on touch
+//=============================================
 function lightOnTouch(i){
     buttons[i].fadeOut(50).fadeIn(60)
 }
