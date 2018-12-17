@@ -93,10 +93,11 @@ function checkBlue(){
        }
        else{
            levelCount++
+           console.log(levelCount)
        }   
     }
     else{
-        
+        location.reload()
 
     }
 }
@@ -115,12 +116,13 @@ function checkYellow(){
         }
         else{
             levelCount++
+            console.log(levelCount)
         }   
         
         
     }
     else{
-       
+        location.reload()
         
     }
 }
@@ -139,11 +141,12 @@ function checkRed(){
         }
         else{
             levelCount++
+            console.log(levelCount)
         }   
        
     }
     else{
-       
+        location.reload()
     }
 }
 function checkgreen(){
@@ -161,10 +164,11 @@ function checkgreen(){
         }
         else{
             levelCount++
+            console.log(levelCount)
         }   
     }
     else{
-       
+        location.reload()
         
     }
 }
