@@ -35,7 +35,7 @@ function lightButtons(){
     if(compTurn == true){
     
   
-for( levelCount =0;levelCount < compSequence.length;levelCount++){
+for( let i =0;i < compSequence.length;i++){
     function loopDelay(levelCount){
     setTimeout(function (){
      sound[compSequence[levelCount]].play();
@@ -45,7 +45,7 @@ for( levelCount =0;levelCount < compSequence.length;levelCount++){
 } loopDelay(levelCount)
 
 }
-levelCount = 0
+
 
 compTurn = false}
 
@@ -84,11 +84,11 @@ function checkBlue(){
            levelCount = 0
            generateSeq()
            compTurn = true;
-           lightButtons()
+           setTimeout(lightButtons(),2000)
            
        }
        else{
-           levelcount++
+           levelCount++
        }   
     }
     else{
@@ -103,17 +103,19 @@ function checkYellow(){
             levelCount = 0
             generateSeq()
             compTurn = true;
-            lightButtons()
+            setTimeout(function (){
+                lightButtons()
+            },2000)
             
         }
         else{
-            levelcount++
+            levelCount++
         }   
         
         
     }
     else{
-       level--
+       
         
     }
 }
@@ -124,17 +126,18 @@ function checkRed(){
             levelCount = 0
             generateSeq()
             compTurn = true;
-            lightButtons()
+            setTimeout(function (){
+                lightButtons()
+            },2000)
             
         }
         else{
-            levelcount++
+            levelCount++
         }   
        
     }
     else{
-        levelCount --;
-        
+       
     }
 }
 function checkgreen(){
@@ -144,15 +147,17 @@ function checkgreen(){
             levelCount = 0
             generateSeq()
             compTurn = true;
-            lightButtons()
+            setTimeout(function (){
+                lightButtons()
+            },2000)
             
         }
         else{
-            levelcount++
+            levelCount++
         }   
     }
     else{
-        levelCount --;
+       
         
     }
 }
@@ -167,7 +172,7 @@ $("#blue").on("click", function (){
     lightOnTouch(0);
 playSounds(0)
 checkBlue();
-
+console.log(levelCount)
 
    }
 })
@@ -178,7 +183,7 @@ $("#yellow").on("click", function (){
     lightOnTouch(1);
     playSounds(1)
     checkYellow();
-    
+    console.log(levelCount)
    }
 })
 $("#red").on("click", function (){
@@ -188,7 +193,7 @@ $("#red").on("click", function (){
     lightOnTouch(2);
     playSounds(2)
     checkRed();
-    
+    console.log(levelCount)
    }
 })
 
@@ -199,6 +204,6 @@ $("#green").on("click", function (){
     lightOnTouch(3);
     playSounds(3);
     checkgreen();
-    
+    console.log(levelCount)
    }
 })
