@@ -3,7 +3,7 @@
 //------------and arrays------------------------------
 //---================================================
 var compSequence = [];
-let level = compSequence.length;
+var level = compSequence.length;
  var on = false
  var start = false;
  var tempo = 2000;
@@ -36,13 +36,13 @@ function lightButtons(){
     
   
 for( let i =0;i < compSequence.length;i++){
-    function loopDelay(levelCount){
+    function loopDelay(i){
     setTimeout(function (){
-     sound[compSequence[levelCount]].play();
-        console.log(buttons[compSequence[levelCount]])
-        buttons[compSequence[levelCount]].fadeOut(50).fadeIn(60)
-    }, tempo * levelCount)
-} loopDelay(levelCount)
+     sound[compSequence[i]].play();
+        console.log(buttons[compSequence[i]])
+        buttons[compSequence[i]].fadeOut(50).fadeIn(60)
+    }, tempo * i)
+} loopDelay(i)
 
 }
 
@@ -80,11 +80,15 @@ function lightOnTouch(i){
 function checkBlue(){
     if(compSequence[levelCount] == 0){
        if(levelCount = compSequence.length){
+        level = compSequence.length
         $("#level").text(level)
            levelCount = 0
            generateSeq()
            compTurn = true;
-           setTimeout(lightButtons(),2000)
+           setTimeout(function (){
+            lightButtons()
+        },2000)
+        
            
        }
        else{
@@ -99,6 +103,7 @@ function checkBlue(){
 function checkYellow(){
     if(compSequence[levelCount] == 1){
         if(levelCount = compSequence.length){
+            level = compSequence.length
             $("#level").text(level)
             levelCount = 0
             generateSeq()
@@ -122,6 +127,7 @@ function checkYellow(){
 function checkRed(){
     if(compSequence[levelCount] == 2){
         if(levelCount = compSequence.length){
+            level = compSequence.length
             $("#level").text(level)
             levelCount = 0
             generateSeq()
@@ -143,6 +149,7 @@ function checkRed(){
 function checkgreen(){
     if(compSequence[levelCount] == 3){
         if(levelCount = compSequence.length){
+            level = compSequence.length
             $("#level").text(level)
             levelCount = 0
             generateSeq()
