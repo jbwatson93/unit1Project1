@@ -70,6 +70,9 @@ function onOff(){
 function lightOnTouch(i){
     buttons[i].fadeOut(50).fadeIn(60)
 }
+//-----------------===========================
+//functions to check if the buttons were right
+//---------------------------------------------
 function checkBlue(){
     if(compSequence[levelCount] == 0){
        if(levelCount = compSequence.length){
