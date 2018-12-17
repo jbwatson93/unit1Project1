@@ -45,6 +45,7 @@ for( let i =0;i < compSequence.length;i++){
 } loopDelay(i)
 }
 compTurn = false
+levelCount = 0
 changeTurn()
 
 
@@ -82,13 +83,15 @@ function lightOnTouch(i){
 //---------------------------------------------
 function checkBlue(){
     if(compSequence[levelCount] == 0){
-       if(levelCount = compSequence.length){
+       
+       if(levelCount == compSequence.length-1){
         level = compSequence.length
-        $("#level").text(level)
-           levelCount = 0
-           generateSeq()
+        console.log(compSequence.length)
+        $("#level").text(level);
+           levelCount = 0;
+           generateSeq();
            compTurn = true;
-           changeTurn()
+           changeTurn();
            setTimeout(function (){
            
             lightButtons()
@@ -108,11 +111,12 @@ function checkBlue(){
 }
 function checkYellow(){
     if(compSequence[levelCount] == 1){
-        if(levelCount = compSequence.length){
+        
+        if(levelCount == compSequence.length-1){
             level = compSequence.length
-            $("#level").text(level)
-            levelCount = 0
-            generateSeq()
+            $("#level").text(level);
+            levelCount = 0;
+            generateSeq();
             compTurn = true;
             changeTurn()
             setTimeout(function (){
@@ -135,7 +139,8 @@ function checkYellow(){
 }
 function checkRed(){
     if(compSequence[levelCount] == 2){
-        if(levelCount = compSequence.length){
+        
+        if(levelCount == compSequence.length-1){
             level = compSequence.length
             $("#level").text(level)
             levelCount = 0
@@ -159,7 +164,8 @@ function checkRed(){
 }
 function checkgreen(){
     if(compSequence[levelCount] == 3){
-        if(levelCount = compSequence.length){
+       
+        if(levelCount === compSequence.length-1){
             level = compSequence.length
             $("#level").text(level)
             levelCount = 0
