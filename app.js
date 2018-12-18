@@ -39,7 +39,8 @@ function lightButtons(){
 for( let i =0;i < compSequence.length;i++){
     function loopDelay(i){
     setTimeout(function (){
-     playSounds(compSequence[i])
+        sound[compSequence[i]].play()
+        sound[compSequence[i]].currentTime =0
         console.log(buttons[compSequence[i]])
         buttons[compSequence[i]].fadeOut(50).fadeIn(60)
         if(i === compSequence.length-1){
@@ -68,6 +69,8 @@ function onOff(){
         $("#on").css("justify-content", "flex-end");
         on =false
         compSequence = []
+        level = compSequence.length
+        $("#level").text(level)
         compTurn = true
     }
     else{
