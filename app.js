@@ -117,6 +117,7 @@ function checkBlue(){
     }
     else{
         failSound()
+        compTurn = true
 
     }
 }
@@ -146,6 +147,7 @@ function checkYellow(){
     }
     else{
         failSound()
+        compTurn = true
         
     }
 }
@@ -174,6 +176,7 @@ function checkRed(){
     }
     else{
         failSound()
+        compTurn = true
     }
 }
 function checkgreen(){
@@ -200,7 +203,7 @@ function checkgreen(){
     }
     else{
         failSound()
-        
+        compTurn = true
         
     }
 }
