@@ -4,21 +4,21 @@
 //---================================================
 var compSequence = [];
 var level = compSequence.length;
- var on = false
- var start = false;
- var tempo = 2000;
- var buttons =[$("#blue"),$("#yellow"),$("#red"),$("#green")];
- var colors = ["blue","yellow","red","green"]
- var levelCount = 0
- var sound = [document.getElementById("sound1"),document.getElementById("sound2"),document.getElementById("sound3"),document.getElementById("sound4")]
- var compTurn = true
+var on = false;
+var start = false;
+var tempo = 2000;
+var buttons =[$("#blue"),$("#yellow"),$("#red"),$("#green")];
+var colors = ["blue","yellow","red","green"];
+var levelCount = 0;
+var sound = [document.getElementById("sound1"),document.getElementById("sound2"),document.getElementById("sound3"),document.getElementById("sound4")];
+var compTurn = true;
 
 //-----------=========------=====-----======------------
 //----------function tp generate and new addition to sequence
 //-------------------================------------------
 function generateSeq(){
     
-        compSequence.push(Math.floor(Math.random() * 4) )
+    compSequence.push(Math.floor(Math.random() * 4) )
     
 }
 
