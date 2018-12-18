@@ -202,7 +202,7 @@ function checkgreen(){
 //-----------fail--Sound------------------
 //========================================
 function failSound(){
-    document.getElementById("#failSound").play()
+    document.getElementById("failSound").play()
 }
 
 
