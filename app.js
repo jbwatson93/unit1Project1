@@ -27,6 +27,7 @@ function generateSeq(){
 
 function playSounds(i){
 sound[i].play()
+sound[i].currentTime =0
 }
 //-------=========--------========-------------
 // function to play back sequence +1///////////
@@ -38,7 +39,7 @@ function lightButtons(){
 for( let i =0;i < compSequence.length;i++){
     function loopDelay(i){
     setTimeout(function (){
-     sound[compSequence[i]].play();
+     playSounds(compSequence[i])
         console.log(buttons[compSequence[i]])
         buttons[compSequence[i]].fadeOut(50).fadeIn(60)
         if(i === compSequence.length-1){
