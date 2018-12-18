@@ -1,4 +1,6 @@
 # Simon
+A fun game to test your memory recall!!!!!
+
 [go to my web app!](https://dreamy-khorana-47dae0.netlify.com)
 
 [Visit my trello board](https://trello.com/invite/b/tGNq26fD/320c145321f487fc41fa9c8f4a0be01a/project1-simon)
@@ -18,3 +20,11 @@ Simon Says think Fast "repeat the sequence back and see how high you can get"
 # WireFrame
 
 ![Wireframe](images/IMG_0642.jpg)
+
+# Technologies and Libraries 
+Jquery
+
+# Version 2
+Version 2 would include 3 different levels easy medium and hard.
+I would add a highscore board.
+I would make it more mobile friendly.
