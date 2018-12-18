@@ -1,4 +1,4 @@
-# unit1Project1
+# Simon
 [go to my web app!](https://dreamy-khorana-47dae0.netlify.com)
 
 [Visit my trello board](https://trello.com/invite/b/tGNq26fD/320c145321f487fc41fa9c8f4a0be01a/project1-simon)
@@ -15,4 +15,6 @@ Simon Says think Fast "repeat the sequence back and see how high you can get"
 7. When done, toggle the on and off switch to off 
 8. To play again repeat from 1
 
+# WireFrame
 
+![Wireframe](images/IMG_0642.jpg)
