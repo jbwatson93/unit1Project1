@@ -41,7 +41,7 @@ for( let i =0;i < compSequence.length;i++){
     setTimeout(function (){
         sound[compSequence[i]].play()
         sound[compSequence[i]].currentTime =0
-        console.log(buttons[compSequence[i]])
+        // console.log(buttons[compSequence[i]])
         buttons[compSequence[i]].fadeOut(50).fadeIn(60)
         if(i === compSequence.length-1){
             compTurn = false
@@ -96,7 +96,7 @@ function checkBlue(){
        
        if(levelCount == compSequence.length-1){
         level = compSequence.length
-        console.log(compSequence.length)
+        // console.log(compSequence.length)
         $("#level").text(level);
            levelCount = 0;
            generateSeq();
@@ -112,7 +112,7 @@ function checkBlue(){
        }
        else{
            levelCount++
-           console.log(levelCount)
+        //    console.log(levelCount)
        }   
     }
     else{
@@ -139,7 +139,7 @@ function checkYellow(){
         }
         else{
             levelCount++
-            console.log(levelCount)
+            // console.log(levelCount)
         }   
         
         
@@ -168,7 +168,7 @@ function checkRed(){
         }
         else{
             levelCount++
-            console.log(levelCount)
+            // console.log(levelCount)
         }   
        
     }
@@ -195,7 +195,7 @@ function checkgreen(){
         }
         else{
             levelCount++
-            console.log(levelCount)
+            // console.log(levelCount)
         }   
     }
     else{
