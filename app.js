@@ -21,7 +21,7 @@ function generateSeq(){
         compSequence.push(Math.floor(Math.random() * 4) )
     
 }
-generateSeq()
+
 
 
 
@@ -66,14 +66,16 @@ function onOff(){
     if(on == true){
         $("#on").css("justify-content", "flex-end");
         on =false
-        location.reload()
+        compSequence = []
+        compTurn = true
     }
     else{
         on = true
-    $("#on").css("justify-content", "flex-start")
+    $("#on").css("justify-content", "flex-start");
+    generateSeq();
    setTimeout(function(){
     lightButtons()
-   }, 3000)
+   }, 2000)
 }
 }
 //------=========--------========-------=======
