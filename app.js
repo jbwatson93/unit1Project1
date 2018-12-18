@@ -26,8 +26,8 @@ function generateSeq(){
 
 
 function playSounds(i){
-sound[i].play()
-sound[i].currentTime =0
+    sound[i].play()
+    sound[i].currentTime =0
 }
 //-------=========--------========-------------
 // function to play back sequence +1///////////
@@ -38,19 +38,19 @@ function lightButtons(){
   
 for( let i =0;i < compSequence.length;i++){
     function loopDelay(i){
-    setTimeout(function (){
-        sound[compSequence[i]].play()
-        sound[compSequence[i]].currentTime =0
-        // console.log(buttons[compSequence[i]])
-        buttons[compSequence[i]].fadeOut(50).fadeIn(60)
-        if(i === compSequence.length-1){
-            compTurn = false
-            levelCount = 0
-            changeTurn()
+        setTimeout(function (){
+            sound[compSequence[i]].play()
+            sound[compSequence[i]].currentTime =0
+             // console.log(buttons[compSequence[i]])
+            buttons[compSequence[i]].fadeOut(50).fadeIn(60)
+            if(i === compSequence.length-1){
+                compTurn = false
+                levelCount = 0
+                changeTurn()
             
-        }
-    }, tempo * i)
-} loopDelay(i)
+            }
+        }, tempo * i)
+    } loopDelay(i)
 
 }
 
@@ -77,9 +77,9 @@ function onOff(){
         on = true
     $("#on").css("justify-content", "flex-start");
     generateSeq();
-   setTimeout(function(){
+    setTimeout(function(){
     lightButtons()
-   }, 2000)
+    }, 2000)
 }
 }
 //------=========--------========-------=======
@@ -220,8 +220,8 @@ $("#blue").on("click", function (){
     } 
    else{
     lightOnTouch(0);
-playSounds(0)
-checkBlue();
+    playSounds(0)
+    checkBlue();
 
 
    }
